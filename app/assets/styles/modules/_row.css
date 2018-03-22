@@ -1,0 +1,42 @@
+.row {
+    
+    @mixin clearFix;
+
+    &--gutters {
+        margin-right: -65px;
+    }
+
+    &--gutters > div {
+        padding-right: 65px;        
+    }
+
+    &__b-margin-until-medium {
+        margin-bottom: 1rem;
+
+        @mixin atMedium {
+            margin-bottom: 0;
+        }
+    }
+    
+
+    @mixin atMedium {
+        &__medium-4 {
+            float: left;
+            width: 33.3333%;
+
+            &--larger {
+                width: 37%;
+            }
+        }
+
+        &__medium-8 {
+            float: left;
+            width: 66.6666%;
+
+            &--smaller {
+                width: 63%;
+            }
+        }
+    }
+    
+}
